@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 #Logistic Regression
 
 # Load the dataset
-df = pd.read_csv('balanced_data.csv')
+df = pd.read_csv('./manually_balanced_flood_prediction_data_chennai (1).csv')
 
 # Optional: One-hot encode 'Location Name' if you decide to use it
 # df = pd.get_dummies(df, columns=['Location Name'], drop_first=True)
@@ -15,8 +15,8 @@ df = pd.read_csv('balanced_data.csv')
 df = df.drop(columns=['Location Name', 'Latitude', 'Longitude'])
 
 # Assuming 'Previous Flood History' is your target variable
-X = df.drop('Previous Flood History', axis=1)  # Features
-y = df['Previous Flood History']  # Target variable
+X = df.drop('Flood Event', axis=1)  # Features
+y = df['Flood Event']  # Target variable
 
 # Split the data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
