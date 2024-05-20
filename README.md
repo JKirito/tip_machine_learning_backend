@@ -46,26 +46,29 @@ The models use the following features for prediction:
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`sh
+
+   ```sh
    git clone https://github.com/yourusername/flood-management-software.git
    cd flood-management-software
-   \`\`\`
+   ```
 
 2. **Create a virtual environment**
-   \`\`\`sh
+
+   ```sh
    python3 -m venv venv
    source venv/bin/activate # On Windows use `venv\Scripts\activate`
-   \`\`\`
+   ```
 
 3. **Install required packages**
-   \`\`\`sh
+
+   ```sh
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. **Run the application**
-   \`\`\`sh
+   ```sh
    python app.py
-   \`\`\`
+   ```
 
 The server will start at `http://127.0.0.1:5000/`.
 
@@ -84,20 +87,21 @@ Returns the feature importance of the Logistic Regression model.
 Predicts flood risk using the Logistic Regression model. Expects a JSON payload with the input features.
 
 Example:
-\`\`\`json
+
+```json
 {
-"rainfallAmount": 100,
-"riverWaterLevel": 50,
-"soilMoistureContent": 30,
-"temperature": 25,
-"relativeHumidity": 60,
-"windSpeed": 10,
-"topography": 5,
-"urbanizationRate": 3,
-"drainageSystemCapacity": 8,
-"previousFloodHistory": 1
+  "rainfallAmount": 100,
+  "riverWaterLevel": 50,
+  "soilMoistureContent": 30,
+  "temperature": 25,
+  "relativeHumidity": 60,
+  "windSpeed": 10,
+  "topography": 5,
+  "urbanizationRate": 3,
+  "drainageSystemCapacity": 8,
+  "previousFloodHistory": 1
 }
-\`\`\`
+```
 
 ### GET `/decision_tree`
 
@@ -108,20 +112,21 @@ Returns the feature importance of the Decision Tree model.
 Predicts flood risk using the Decision Tree model. Expects a JSON payload with the input features.
 
 Example:
-\`\`\`json
+
+```json
 {
-"rainfallAmount": 100,
-"riverWaterLevel": 50,
-"soilMoistureContent": 30,
-"temperature": 25,
-"relativeHumidity": 60,
-"windSpeed": 10,
-"topography": 5,
-"urbanizationRate": 3,
-"drainageSystemCapacity": 8,
-"previousFloodHistory": 1
+  "rainfallAmount": 100,
+  "riverWaterLevel": 50,
+  "soilMoistureContent": 30,
+  "temperature": 25,
+  "relativeHumidity": 60,
+  "windSpeed": 10,
+  "topography": 5,
+  "urbanizationRate": 3,
+  "drainageSystemCapacity": 8,
+  "previousFloodHistory": 1
 }
-\`\`\`
+```
 
 ### GET `/svm`
 
@@ -132,20 +137,21 @@ Returns the feature importance of the SVM model.
 Predicts flood risk using the SVM model. Expects a JSON payload with the input features.
 
 Example:
-\`\`\`json
+
+```json
 {
-"rainfallAmount": 100,
-"riverWaterLevel": 50,
-"soilMoistureContent": 30,
-"temperature": 25,
-"relativeHumidity": 60,
-"windSpeed": 10,
-"topography": 5,
-"urbanizationRate": 3,
-"drainageSystemCapacity": 8,
-"previousFloodHistory": 1
+  "rainfallAmount": 100,
+  "riverWaterLevel": 50,
+  "soilMoistureContent": 30,
+  "temperature": 25,
+  "relativeHumidity": 60,
+  "windSpeed": 10,
+  "topography": 5,
+  "urbanizationRate": 3,
+  "drainageSystemCapacity": 8,
+  "previousFloodHistory": 1
 }
-\`\`\`
+```
 
 ## Contributing
 
